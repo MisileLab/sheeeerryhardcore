@@ -1,6 +1,7 @@
-name: sample
+name: sheeeerryhardcore
 version: 0.0.1
-main: com.chizstudio.misilelaboratory
-api-version: 1.17
+main: xyz.misilelaboratory.xyz.misilelaboratory.SherryHardcore
+api-version: 1.18
+load: STARTUP
 libraries:
-  - org.jetbrains.kotlin:kotlin-stdlib:1.6.10
+  - org.jetbrains.kotlin:kotlin-stdlib:1.6.21
