@@ -1,6 +1,6 @@
 name: sheeeerryhardcore
 version: 0.0.1
-main: xyz.misilelaboratory.xyz.misilelaboratory.SherryHardcore
+main: xyz.misilelaboratory.SherryHardcore
 api-version: 1.18
 load: STARTUP
 libraries:
