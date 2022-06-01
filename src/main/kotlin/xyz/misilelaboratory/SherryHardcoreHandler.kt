@@ -11,6 +11,8 @@ import org.bukkit.event.player.PlayerJoinEvent
 
 class SherryHardcoreHandler(private val server: Server): Listener {
 
+    private var isEnderDragonDead = false
+
     @EventHandler
     fun onJoin(e: PlayerJoinEvent) {
         val player = e.player
@@ -21,7 +23,7 @@ class SherryHardcoreHandler(private val server: Server): Listener {
 
     @EventHandler
     fun onDeath(e: PlayerDeathEvent) {
-        if (!server.isStopping) {
+        if (!server.isStopping && !isEnderDragonDead) {
             server.spigot().restart()
         }
     }
@@ -29,8 +31,7 @@ class SherryHardcoreHandler(private val server: Server): Listener {
     @EventHandler
     fun onEntityDeath(e: EntityDeathEvent) {
         if (e.entityType == EntityType.ENDER_DRAGON && e.entity.killer != null) {
-            server.logger.info("wa sherry")
-            server.logger.warning("아시는구나")
+            isEnderDragonDead = true
         }
     }
 }
